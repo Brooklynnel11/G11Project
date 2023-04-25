@@ -1,12 +1,340 @@
 
-body {
+<html>
+	<head>
+		<title>Boxology</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="main.css" />
 
+        
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    
+        
+  
+        <style>
+            /* Set full height for the body and make the container fill up the screen */
+           
+			body {
+        margin: 0;
+        height: 100vh;
+        background-color: white;
+      }
+      #animation-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+      }
+      #animation-container .bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        z-index: 1;
+        background: white;
+      }
+      #animation-container .bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      #animation-container .content {
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+      }
+      #animation-container .content h1 {
+        font-size: 5em;
+      }
+      #content {
+        display: none;
+        opacity: 0;
+        transition: opacity 2s ease-in-out;
+      }
 
-
-
-
-
-
+      .wrapper.align-center {
+  clear: both;
 }
-head{}
 
+
+          </style>
+
+<script>
+  window.onload = function () {
+  var animationContainer = document.getElementById("animation-container");
+  var content = document.getElementById("content");
+  var bg = document.querySelector(".bg");
+
+function fadeOutAnimation() {
+return new Promise(function (resolve, reject) {
+var animation = bg.animate(
+[{ opacity: 1, transform: "translate(-50%, -50%) scale(1)" }, { opacity: 0, transform: "translate(-50%, -50%) scale(0)" }],
+{
+  duration: 3500,
+  easing: "ease-in-out",
+  fill: "forwards",
+}
+);
+animation.onfinish = function() {
+content.style.display = "flex";
+resolve();
+};
+});
+}
+
+  function fadeInContent() {
+    setTimeout(function () {
+      content.style.opacity = "1";
+    }, 500);
+  }
+
+  fadeOutAnimation().then(fadeInContent);
+};
+</script>
+
+</head>
+
+
+
+<body> 
+    <div id="animation-container">
+        <div class="bg">
+            <!-- Replace the path below with your .gif file path -->
+            <img src="logo/giflogo2.gif" alt="gif screen">
+        </div>
+        <div class="content">
+          
+        </div>
+    </div>
+     <!--  <script src="javas.js">  
+	      </script>   -->
+
+
+		  
+
+    
+<div class="content">
+  </div>
+             <div	 id="content"> 
+
+
+        <header id="header">
+            <div class="logo">
+               
+                <a href="index.html"  class="logo">
+                    
+                    <strong> Boxology</strong>   Boxing knowledge in your hand</a> 
+                    
+            </div>
+            <div class="tophead">
+            
+            
+                <div class="buttonh" >   
+            
+            
+                <!--<a href="index.html"  class="logo"><strong> Boxology</strong> <br> Boxing knowledge in your hand</a> -->  
+                
+                
+                <a href="index.html">Home</a>
+                    <a href="needtoknow.html">Need to know</a>
+                    <a href="tutorials.html">Tutorials</a>
+                        <a href="store.html">Store</a>
+                            <a href="map.html">map</a>
+                        </div>
+                    </div>
+                
+                    
+                <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+       
+            
+        </header>
+
+        <section id="banner">
+            <div class="inner">
+              <div class="giflogo"> 
+                <img src="logo/giflogo.gif"/>
+            </div> 
+
+                  <!-- <div class="giflogo"> 
+                        <img src="logo/giflogo.gif"/>
+                    </div> 
+                  -->
+                  <header>
+                    <h1>Welcome to Boxology
+
+
+                    </h1>
+                    <h2>Hub for the best resources for new novice boxers</h2>
+
+                    
+                    <div class="quotes">
+                      <!-- skills-->
+                                          <div class="col">
+                                              <span class="icon fa-film"></span>
+                                              <h3>
+                                                  "The Temptation for Greatness Is the Biggest Drug in the World."</h3>
+                                              <p> -Michael Gerard Tyson </p>
+                                          </div>
+                      
+                                          <div class="col">
+                                              <span class="icon fa-camera"></span>
+                                              <h3>
+                                                  "Getting Hit Motivates Me. It Makes Me Punish the Guy More..."</h3>
+                                              <p> -Roberto Duran</p>
+                                          </div>
+                      
+                                          <div class="col">
+                                              <span class="icon fa-paint-brush"></span>
+                                              <h3>
+                                                  "To See a Man Beaten Not by a Better Opponent but by Himself Is a Tragedy."
+                                              </h3>
+                                              <p>-Cus D'Amato</p>
+                                          </div>
+                                          <a href="Needtoknow.html" class="button">Learn More</a>
+                                      </div>
+
+                </header>
+
+
+</div> 
+
+                
+
+
+
+        </section>
+
+       <!-- <section class="blockquote22">
+
+            <blockquote>“You never lose until you actually give up.”
+        
+        <p> <br>-Michael Gerard Tyson</p>
+        
+            </blockquote>
+        </section> -->
+
+
+
+        
+
+
+            <section id="three" class="wrapper align-center">
+				<div class="inner">
+					<div class="flex flex-2">
+						<article>
+            <div class="heading2"> 
+            <h1>Seasonal sale
+
+
+            </h1>
+         
+          </div>
+
+         
+							
+                
+          <div class="container2">
+            <img src="wrapsresize.jpg" alt="Avatar2" class="image2" style="width:100%">
+            <div class="middle2">
+              <a href="store.html">
+                <div class="text2">John Doe</div>
+              </a>
+            </div>
+          </div>
+
+
+							
+							<header>
+								<h3>Wraps</h3>
+							</header>
+							<p>Boxing wraps are essential for boxers planning on training, fighting and or sparring<br /> Boxing wraps are cloth fabrics usually 2 inches in width used to tighten the hand <br> and come in different lenghths for each preference of the boxer.</p>
+              <a href="store.html" class="button">Check Store</a>
+
+
+                <br>
+						
+                <br>
+
+                <br>
+							<div class="imageround2">
+								<img src="boots.jpg" alt="Pic 02" />
+							</div>
+							<header>
+								<h3>Boxing boots</h3>
+							</header>
+							<p>Boxing boots are usually found on serious boxers as it can show your dedication to the sport through this investment<br /> Boxing shoes are used to help you move more swiftly, safely and smoothly, they should feel like a second skin, but with support and should feel like you're not wearing shoes at all.</p>
+              <a href="store.html" class="button">Check Store</a>
+
+						</article>
+					</div>
+				</div>
+			</section>
+      
+   
+       
+		</div>
+    <footer>
+      <a href="https://goo.gl/maps/KSSRCHdoAhvCSBsi9"></a>
+    <!--    <div class="footer2"> 
+      <a href="Needtoknow.html" class="button">show more</a>
+    </div>  -->
+
+    <!--  
+    
+    <footer class="section footer-classic context-dark bg-image" style="background: #2d3246;">
+            <div class="container">
+              <div class="row row-30">
+                <div class="col-md-4 col-xl-5">
+                  <div class="pr-xl-4"><a class="brand" href="index.html"><img class="brand-logo-light" src="https://dummyimage.com/140x37/f1f1f1/000.jpg" alt="" width="140" height="37" srcset="https://dummyimage.com/140x37/f1f1f1/000.jpg 2x"></a>
+                    <p>We are an award-winning creative agency, dedicated to the best result in web design, promotion, business consulting, and marketing.</p>
+                    <!-- Rights
+                    <p class="rights"><span>©  </span><span class="copyright-year">2020</span><span> </span><span>Company</span><span> - </span><span>All Rights Reserved.</span></p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <h5>Contacts</h5>
+                  <dl class="contact-list">
+                    <dt>Address:</dt>
+                    <dd>798 South Park Avenue, New York, USA</dd>
+                  </dl>
+                  <dl class="contact-list">
+                    <dt>email:</dt>
+                    <dd><a href="mailto:#">compagny@email.com</a></dd>
+                  </dl>
+
+
+
+
+
+
+
+
+    </footer>     
+  -->
+   <!--  <footer>
+      <a href="Needtoknow.html" class="button">show more</a>
+  </footer>
+-->
+    
+
+
+                </body>
+
+
+
+
+
+
+
+
+
+        </html>
